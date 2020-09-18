@@ -4,31 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Funcionários</title>
+    <title>Nosso Time</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <div>
-        <p>Alvaro Cell</p>
-    </div>
-    
-    <div>
-        <a href="index.html">Página Inicial</a>
-        <a href="ctrl-estoque.html">Controle de Estoque</a>
-        <a href="add-produto.html">Adicionar Produto</a>
-        <a href="funcionarios.html">Funcionários</a>
+    <div class="cabecalho-geral">
+        <div class="cabecalho">
+            <a href="index.html"><img src="./img/logo-loja.png" alt="Logo Alvaro Cell" class="img-logo"></a>
+        </div>
+
+        <div class="cabecalho" class="nome">
+            <h1>Alvaro Cell</h1>
+        </div>
+        
+        <div class="cabecalho">
+            <a href="index.html" class="menu">Página Inicial</a>
+            <a href="ctrl-estoque.html" class="menu">Controle de Estoque</a>
+            <a href="add-produto.html" class="menu">Adicionar Produto</a>
+            <a href="funcionarios.html" class="menu">Nosso Time</a>
+        </div>
     </div>
 
-    <h2>Funcionários</h2>
-    <!-- Crie uma lista de funcionários usando as tags que você aprendeu hoje abaixo \/ -->
-    <ul>
-        <li>Caio Texeira</li>
-        <li>Lais Petra</li>
-        <li>Letícia Chijo</li>
-        <li>Pedro Navas</li>
-        <li>Aline Lima</li>
-        <li>João Alves</li>
-        <li>Jonathan Moreira</li>
-        <li>Soter Padua</li>
-    </ul>    
+    <div class="corp">
+        <h2 id="nosso-time">Nosso Time</h2>
+        <!-- Crie uma lista de funcionários usando as tags que você aprendeu hoje abaixo \/ -->
+        <ul>
+            <li><img src="./img/alvaro-barros.png" alt="Foto de Álvaro Barros" class="nosso-time"><br>Álvaro Barros<br>CEO</li>
+            <li><img src="./img/amanda-bowers.png" alt="Foto de Amanda Bowers" class="nosso-time"><br>Amanda Bowers<br>CTO</li>
+            <li><img src="./img/caio-nogueira.png" alt="Foto de Caio Nogueira" class="nosso-time"><br>Caio Nogueira<br>COO</li>
+            <li><img src="./img/carol-fernandes.png" alt="Foto de Carol Fernandes" class="nosso-time"><br>Carol Fernandes<br>CMO</li>
+            <li><img src="./img/joao-gomes.png" alt="Foto de João Gomes" class="nosso-time"><br>João Gomes<br>CFO</li>
+            <li><img src="./img/paulo-bernardes.png" alt="Foto de Paulo Bernardes" class="nosso-time"><br>Paulo Bernardes<br>Costumer Service</li>
+        </ul> 
+        <div class="carreira">
+            <h2>Venha fazer parte do nosso time!</h2>
+            <a href=""><button type="button" class="botao">CARREIRA</button></a>
+        </div>
+    </div>
+    
+    <div class="rodape">
+        <div>
+            <p>Siga-nos nas redes sociais!</p>
+    
+            <div id="redes-sociais">
+                <img src="https://image.flaticon.com/icons/png/512/25/25305.png" class="redes-sociais">
+                <img src="https://image.flaticon.com/icons/png/512/25/25425.png" class="redes-sociais">
+                <img src="https://image.flaticon.com/icons/png/512/8/8800.png" class="redes-sociais">
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -5,66 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Controle de Estoque</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <div>
-        <p>Alvaro Cell</p>
-    </div>
-    
-    <div>
-        <a href="index.html">Página Inicial</a>
-        <a href="ctrl-estoque.html">Controle de Estoque</a>
-        <a href="add-produto.html">Adicionar Produto</a>
-        <a href="funcionarios.html">Funcionários</a>
-    </div>
+    <div class="cabecalho-geral">
+        <div class="cabecalho">
+            <a href="index.html"><img src="./img/logo-loja.png" alt="Logo Alvaro Cell" class="img-logo"></a>
+        </div>
 
-    <h2>Controle de Estoque</h2>
-
-    <table>
-        <tr>
-            <th>Foto</th>
-            <th>Descrição</th>
-            <th>Preço (R$)</th>
-            <th>Quantidade disponível</th>
-        </tr>
-
-        <tr>
-            <td><img src="./img/xiaomi-redmi-note-9.jpeg" alt="Celular Xiaomi Redmi Note 9"/></td>
-            <td> Xiaomi Redmi Note 9 </td>
-            <td> R$ 1.498,90 </td>
-            <td> 23 </td>
-        </tr>
-
-        <tr>
-            <td><img src="./img/iphone-XR.jpeg" alt="Celular iPhone XR"/></td>
-            <td> iPhone XR </td>
-            <td> R$ 3.299,00 </td>
-            <td> 48 </td>
-        </tr>
-
-        <tr>
-            <td><img src="./img/z6-pro.jpeg" alt="Celular Z6 pro"/></td>
-            <td> Z6 pro </td>
-            <td> R$ 402,60 </td>
-            <td> 13 </td>
-        </tr>
-
-        <tr>
-            <td><img src="./img/samsung-galaxy-a31.jpeg" alt="Celular Samsung Galaxy A31"/></td>
-            <td> Samsung Galaxy A31 </td>
-            <td> R$ 899,00 </td>
-            <td> 21 </td>
-        </tr>
+        <div class="cabecalho" class="nome">
+            <h1>Alvaro Cell</h1>
+        </div>
         
-        <!-- Crie mais uma linha desta tabela abaixo \/ -->
+        <div class="cabecalho">
+            <a href="index.html" class="menu">Página Inicial</a>
+            <a href="ctrl-estoque.html" class="menu">Controle de Estoque</a>
+            <a href="add-produto.html" class="menu">Adicionar Produto</a>
+            <a href="funcionarios.html" class="menu">Nosso Time</a>
+        </div>
+    </div>
 
-        <tr>
-            <td><img src="./img/motorola-moto-G8.jpeg" alt="Celular Motorola Moto G8"></td>
-            <td> Motorola Moto G8 </td>
-            <td> R$ 899,90 </td>
-            <td> 18 </td>
-        </tr>
-    </table>
+    <div class="corp">
+        <h2>Controle de Estoque</h2>
+
+        <table>
+            <tr>
+                <th class=>Foto</th>
+                <th>Descrição</th>
+                <th>Preço (R$)</th>
+                <th>Quantidade disponível</th>
+            </tr>
+
+            <tr>
+                <td><img src="./img/xiaomi-redmi-note-9.jpeg" alt="Celular Xiaomi Redmi Note 9" class="img-estoque"></td>
+                <td> Xiaomi Redmi Note 9 </td>
+                <td> R$ 1.498,90 </td>
+                <td> 23 </td>
+            </tr>
+
+            <tr>
+                <td><img src="./img/iphone-XR.jpeg" alt="Celular iPhone XR" class="img-estoque"></td>
+                <td> iPhone XR </td>
+                <td> R$ 3.299,00 </td>
+                <td> 48 </td>
+            </tr>
+
+            <tr>
+                <td><img src="./img/z6-pro.jpeg" alt="Celular Z6 pro" class="img-estoque"></td>
+                <td> Z6 pro </td>
+                <td> R$ 402,60 </td>
+                <td> 13 </td>
+            </tr>
+
+            <tr>
+                <td><img src="./img/samsung-galaxy-a31.jpeg" alt="Celular Samsung Galaxy A31" class="img-estoque"></td>
+                <td> Samsung Galaxy A31 </td>
+                <td> R$ 899,00 </td>
+                <td> 21 </td>
+            </tr>
+            
+            <!-- Crie mais uma linha desta tabela abaixo \/ -->
+
+            <tr>
+                <td><img src="./img/motorola-moto-G8.jpeg" alt="Celular Motorola Moto G8" class="img-estoque"></td>
+                <td> Motorola Moto G8 </td>
+                <td> R$ 899,90 </td>
+                <td> 18 </td>
+            </tr>
+    
+        </table>
+    </div>
+
+    <div class="rodape">
+        <div>
+            <p>Siga-nos nas redes sociais!</p>
+    
+            <div id="redes-sociais">
+                <img src="https://image.flaticon.com/icons/png/512/25/25305.png" class="redes-sociais">
+                <img src="https://image.flaticon.com/icons/png/512/25/25425.png" class="redes-sociais">
+                <img src="https://image.flaticon.com/icons/png/512/8/8800.png" class="redes-sociais">
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
