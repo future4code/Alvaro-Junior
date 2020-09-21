@@ -22,6 +22,10 @@ input {
     width: 500px;
 }
 
+button {
+    border: none;
+}
+
 button:focus {
     color: white;
 }
