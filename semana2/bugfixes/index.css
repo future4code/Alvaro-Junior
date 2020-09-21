@@ -99,6 +99,10 @@ table {
     text-align: center;
 }
 
+.img-produtos{
+    width: 60px;
+}
+
 td button {
     background-color: #fadf63;
     width: 150px;
