@@ -1,7 +1,16 @@
 *{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-/*cabeçalho*/
+/*header*/
+header{
+    box-shadow: 0 0 6px #46404C;
+}
+.languages{
+    padding: 10px;
+}
+.languages img{
+    width: 30px;
+}
 .cabecalho{
     display: flex; /*colocar as divs do cabeçalho lado a lado*/
     align-items: center;
@@ -16,17 +25,17 @@
 /*links*/
 .menu a {
     text-decoration: none; /*tirar formatação do link*/
-    color: #7A7A7A; /* mudar cor do link */
+    color: #46404C; /* mudar cor do link */
     margin-left: 10px;
 }
 .menu a:hover{
-    color: rgb(48, 0, 53); /*mudar a cor do link quando passar o mouse por cima*/
+    color: #3C65FF; /*mudar a cor do link quando passar o mouse por cima*/
 }
 /*fim links*/
 /*fim cabeçalho*/
 /*página inicial*/
 body{
-    color:#7A7A7A;
+    color:#46404C;
     text-align: center;
     margin: 0px;
 }
@@ -42,14 +51,14 @@ body{
     border-radius: 50%;
 }
 #conhecimentos{
-    background-color: #741bff;
+    background-color: #46494c;
     padding: 30px 0px;
 }
 #conhecimentos h2{
     color: white;
 }
 #conhecimentos h4{
-    color: #741bff;
+    color:#46404C;
 }
 #tabela-conhecimentos {
     display: flex;
@@ -66,7 +75,7 @@ body{
 #ultimos-projetos {
     background-image: url(./img/backgorund.png);
     background-size: cover;
-    background-color: antiquewhite;
+    background-color: #dcdcdd;
     padding-top: 20px;
 }
 #tabela-projetos{
@@ -101,9 +110,10 @@ body{
 /*Alvaro Cell*/
 /*rodapé*/
 .rodape{
-    background-color: #c9c6c6;
+    background-color: #4c5c68;
     text-align: center;
     padding-bottom: 30px;
+    color: black;
 }
 .contato{
     display: flex;
