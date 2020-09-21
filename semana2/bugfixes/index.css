@@ -90,6 +90,7 @@ div:last-child {
 table {
     width: 60%;
     text-align: center;
+    margin: 0 auto;
 }
 
 .img-produtos{
@@ -133,4 +134,8 @@ td button:active{
 
 #back-button:hover {
     background-color: #635a3d
+}
+
+#container-back-button{
+    text-align: center;
 }
