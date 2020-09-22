@@ -1,0 +1,51 @@
+/*
+ *
+ * Cabeçalho
+ *
+ */
+body{
+    margin: 0px;
+}
+header{
+    width: 100vw;
+    height: 10vh;
+    box-shadow: 0 0 0.5em black;
+}
+.top-bar-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    padding: 10px 10vw;
+    
+}
+.top-bar-logo img{
+    height: 45px;
+}
+
+.top-bar-search input{
+    color: gray;
+    width: 80%;
+    margin: 0 10%;
+}
+.top-bar-links{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.top-bar-links button{
+    background-color: #6CE1D5;
+    border: solid 1pt black;
+    border-radius: 2pt;
+    padding: 5pt 10pt;
+    font-weight: bold;
+}
+.top-bar-links button:hover{
+    color: white;
+}
+.top-bar-links button:active{
+    background-color: #197269;
+}
+.top-bar-links-images{
+    height: 20px;
+    padding-left: 20px;
+}
