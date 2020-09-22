@@ -1,0 +1,144 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*header*/
+header{
+    box-shadow: 0 0 6px #46404C;
+}
+.languages{
+    padding: 10px;
+}
+.languages img{
+    width: 30px;
+}
+.cabecalho{
+    display: flex; /*colocar as divs do cabeçalho lado a lado*/
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 80px 0px 40px;
+}
+/*logo*/
+.img-logo-cabecalho{
+    height: 50px;
+}
+/*fim logo*/
+/*links*/
+.menu a {
+    text-decoration: none; /*tirar formatação do link*/
+    color: #46404C; /* mudar cor do link */
+    margin-left: 10px;
+}
+.menu a:hover{
+    color: #3C65FF; /*mudar a cor do link quando passar o mouse por cima*/
+}
+/*fim links*/
+/*fim cabeçalho*/
+/*página inicial*/
+body{
+    color:#46404C;
+    text-align: center;
+    margin: 0px;
+}
+#quem-sou{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    margin: 20px 0px;
+}
+#quem-sou img{
+    width: 400px;
+    border-radius: 50%;
+}
+#conhecimentos{
+    background-color: #46494c;
+    padding: 30px 0px;
+}
+#conhecimentos h2{
+    color: white;
+}
+#conhecimentos h4{
+    color:#46404C;
+}
+#tabela-conhecimentos {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+.tab-conhecimentos {
+    background-color: white;
+    width: 300px;
+    border-radius: 20px;
+    padding: 10px;
+}
+#ultimos-projetos {
+    background-image: url(./img/backgorund.png);
+    background-size: cover;
+    background-color: #dcdcdd;
+    padding-top: 20px;
+}
+#tabela-projetos{
+    display: flex;
+    justify-content: center;
+}
+.projeto {
+    width: 350px;
+    border-radius: 20px;
+    margin: 30px 10px;
+    padding: 20px;
+    background-color: white;
+    text-align: right;
+}
+.projeto img {
+    width: 100%;
+}
+/*fim página incial*/
+/*Alvaro Cell*/
+#apresentacao-alvaro-cell{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 50px;
+}
+.projeto-alvaro-cell {
+    width: 500px;
+}
+.projeto-alvaro-cell img{
+    width: 100%;
+}
+/*Alvaro Cell*/
+/*rodapé*/
+.rodape{
+    background-color: #4c5c68;
+    text-align: center;
+    padding-bottom: 30px;
+    color: black;
+}
+.contato{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.logo-rodape{
+    padding: 20px;
+}
+.mensagem{
+    padding: 20px;
+    text-align: right;
+}
+#nome {
+    width: 300px;
+}
+#email{
+    width: 300px;
+}
+#msg {
+    width: 300px;
+    height: 200px;
+}
+.redes-sociais img{
+    width: 40px;
+    padding: 0px 10px;
+}
+/*fim rodapé*/
