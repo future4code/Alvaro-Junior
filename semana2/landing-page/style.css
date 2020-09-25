@@ -1,0 +1,101 @@
+/*
+ *
+ *
+ * Landing Page
+ *
+ *
+ */
+*{
+    margin: 0;
+}
+
+/*
+ *
+ *
+ * Header
+ *
+ *
+ */
+.container{
+    max-width: 1152px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.logo-img{
+    max-width: 150px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header-menu{
+    display: flex;
+    justify-content: space-evenly;
+    width: 700px;
+}
+
+/*
+ *
+ *
+ * Main
+ *
+ *
+ */
+.img-familia{
+    max-width: 550px;
+    border-radius: 20%;
+}
+
+.vantagens{
+    max-width: 1152px;
+    margin: 0 auto;
+}
+
+.img-aplicativo{
+    max-width: 230px;
+}
+
+.descricao-vantagens{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.aplicativo{
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.grid-vantagens{
+    max-width: 300px;
+}
+
+.img-vantagens{
+    height: 25px;
+}
+
+/*
+ *
+ *
+ * Footer
+ *
+ *
+ */
+ .footer-container{
+    max-width: 1152px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+ }
