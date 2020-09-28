@@ -7,6 +7,27 @@
  */
 *{
     margin: 0;
+    font-family: 'Muli', sans-serif;
+}
+
+article:not(:last-child){
+    padding-bottom:30px;
+}
+
+article:not(:first-child){
+    padding-top:30px;
+}
+
+h1,h2,h3,h4{
+    font-family: 'Kanit', sans-serif;
+    margin: 10px 0;
+}
+
+button{
+    background-color: #FFBC58;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
 }
 
 /*
@@ -16,6 +37,11 @@
  *
  *
  */
+
+ header{
+     background-color: #FF914D;
+     padding:20px;
+ }
 .container{
     max-width: 1152px;
     display: flex;
@@ -25,21 +51,46 @@
 }
 
 .logo-img{
-    max-width: 150px;
+    height: 80px;
 }
 
 ul{
     list-style-type: none;
+    padding: 0;
+}
+
+li{
+    padding: 20px;
+    font-weight: bold;
 }
 
 a{
     text-decoration: none;
+    color: white;
 }
 
 .header-menu{
     display: flex;
     justify-content: space-evenly;
     width: 700px;
+    position: relative;
+}
+
+.header-menu li:hover{
+    background-color: #FFBC58;
+}
+
+.header-menu li:hover .header-submenu{
+    transform: rotateX(0);
+    background-color:#FFBC58;
+}
+
+.header-submenu{
+    position: absolute;
+    margin: 0;
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+    transition-timing-function: ease-in-out;
 }
 
 /*
@@ -49,12 +100,21 @@ a{
  *
  *
  */
+
+ main{
+     padding: 30px 20px;
+ }
 .img-familia{
     max-width: 550px;
     border-radius: 20%;
 }
 
 .vantagens{
+    margin: 0 auto;
+    background-color:#FFBD59;
+}
+
+.tarifas{
     max-width: 1152px;
     margin: 0 auto;
 }
@@ -93,9 +153,41 @@ a{
  *
  *
  */
+ footer{
+    background-color: #666666;
+    padding-top: 30px;
+    padding: 0 20px;
+ }
+
  .footer-container{
     max-width: 1152px;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+ }
+
+ footer a{
+     color: black;
+ }
+
+ footer li{
+    padding: 0;
+ }
+
+ .app-download{
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .app-download img{
+    width: 120px;
+ }
+
+ .redes-sociais{
+     display:flex;
+     justify-content: space-between;
+ }
+
+ .redes-sociais img{
+     width: 30px;
  }
