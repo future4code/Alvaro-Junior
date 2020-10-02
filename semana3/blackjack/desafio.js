@@ -81,7 +81,7 @@ while (continuar1===true){
 
       let continuar3 = true
       while(continuar3===true){
-         if (valorCartasComputador < 21 && valorCartasComputador < valorCartasUsuario && valorCartasUsuario < 21){
+         if (valorCartasComputador < 21 && valorCartasComputador < valorCartasUsuario && valorCartasUsuario <= 21){
             cartaComputador.push(comprarCarta())
             
             cartaComputadorImprimir =""
@@ -105,9 +105,9 @@ while (continuar1===true){
       
       
    
-       if((valorCartasUsuario > valorCartasComputador || valorCartasComputador >= 21) && valorCartasUsuario < 21){
+       if((valorCartasUsuario > valorCartasComputador || valorCartasComputador > 21) && valorCartasUsuario <= 21){
          console.log("O usuário ganhou!")
-       } else if((valorCartasUsuario < valorCartasComputador || valorCartasUsuario >= 21) && valorCartasComputador < 21){
+       } else if((valorCartasUsuario < valorCartasComputador || valorCartasUsuario > 21) && valorCartasComputador <= 21){
          console.log("O computador ganhou!")
        }else{
          console.log("Empate!")
