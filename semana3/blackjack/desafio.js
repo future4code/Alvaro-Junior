@@ -105,9 +105,9 @@ while (continuar1===true){
       
       
    
-       if((valorCartasUsuario > valorCartasComputador || valorCartasComputador > 21) && valorCartasUsuario < 21){
+       if((valorCartasUsuario > valorCartasComputador || valorCartasComputador >= 21) && valorCartasUsuario < 21){
          console.log("O usuário ganhou!")
-       } else if((valorCartasUsuario < valorCartasComputador || valorCartasUsuario > 21) && valorCartasComputador < 21){
+       } else if((valorCartasUsuario < valorCartasComputador || valorCartasUsuario >= 21) && valorCartasComputador < 21){
          console.log("O computador ganhou!")
        }else{
          console.log("Empate!")
