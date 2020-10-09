@@ -49,55 +49,55 @@
 // Para percorrer/iterar uma lista podemos usar laços de repetição, while, for ou for of.
 // Para exemplificar faremos um programa que a partir de um array retorne os elementos pares e impares de um array.
 
-const numeros = [25, 12, 55, 64, 121, 44, 11, 84, 51, 48, 14, 73, 111, 283]
+// const numeros = [25, 12, 55, 64, 121, 44, 11, 84, 51, 48, 14, 73, 111, 283]
 
-// while
-let arrayPares = []
-let arrayImpares = []
+// // while
+// let arrayPares = []
+// let arrayImpares = []
 
-let i = 0
+// let i = 0
 
-while (i < numeros.length){
-    if(numeros[i] % 2 === 0){
-        arrayPares.push(numeros[i])
-    } else {
-        arrayImpares.push(numeros[i])
-    }
-    i++
-}
+// while (i < numeros.length){
+//     if(numeros[i] % 2 === 0){
+//         arrayPares.push(numeros[i])
+//     } else {
+//         arrayImpares.push(numeros[i])
+//     }
+//     i++
+// }
 
-console.log(arrayPares)
-console.log(arrayImpares)
+// console.log(arrayPares)
+// console.log(arrayImpares)
 
-// for
-arrayPares = []
-arrayImpares = []
+// // for
+// arrayPares = []
+// arrayImpares = []
 
-for(i = 0; i < numeros.length; i++){
-    if(numeros[i] % 2 === 0){
-        arrayPares.push(numeros[i])
-    } else {
-        arrayImpares.push(numeros[i])
-    }
-}
+// for(i = 0; i < numeros.length; i++){
+//     if(numeros[i] % 2 === 0){
+//         arrayPares.push(numeros[i])
+//     } else {
+//         arrayImpares.push(numeros[i])
+//     }
+// }
 
-console.log(arrayPares)
-console.log(arrayImpares)
+// console.log(arrayPares)
+// console.log(arrayImpares)
 
-// for of
-arrayPares = []
-arrayImpares = []
+// // for of
+// arrayPares = []
+// arrayImpares = []
 
-for (numero of numeros){
-    if(numero % 2 === 0){
-        arrayPares.push(numero)
-    } else {
-        arrayImpares.push(numero)
-    }
-}
+// for (numero of numeros){
+//     if(numero % 2 === 0){
+//         arrayPares.push(numero)
+//     } else {
+//         arrayImpares.push(numero)
+//     }
+// }
 
-console.log(arrayPares)
-console.log(arrayImpares)
+// console.log(arrayPares)
+// console.log(arrayImpares)
 
 // EXERCÍCIO 2
 
@@ -116,3 +116,17 @@ console.log(arrayImpares)
 
 // e. O valor da expressão retornará true, pois a segunda expressão (!booleano 4 && booleano 3 && booleano 3) retornará verdadeiro,
 // e como o operador || retornará true se ao menos uma das condições forem true, a expressão geral retornará true.
+
+// EXERCÍCIO 3
+
+// O código do meu colega não funcionará como o experado pois ele retornará sempre um numero par a mais, uma vez que ele está usando
+// a condição i <= quantidadeDeNumerosPares, também a constante quantidadeDeNumerosPares não está recebendo nenhum valor, e por fim
+// o indice i não está sendo atualizado após cada iteração para resolver esse problema deve-se apenas alterar a condição para i <= quantidadeDeNumerosPares e declara a 
+// constantequantidadeDeNumerosPares e atualizar o indice i ao final de cada iteração.
+
+const quantidadeDeNumerosPares = Number(prompt("Digite a quantidade de números pares desejada!"))
+let i = 0
+while(i < quantidadeDeNumerosPares) {
+  console.log(i*2)
+  i++
+}
