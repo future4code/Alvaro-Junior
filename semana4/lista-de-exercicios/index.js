@@ -19,3 +19,15 @@
 // De forma que no console será impresso:
 // 165
 // TIPO DE INVESTIMENTO INFORMADO INCORRETO
+
+// EXERCÍCIO 3
+
+// O código inicia declarando 3 arrays, numeros que é um array de numeros, array1 e array2 que são vazios. Após isso
+// o array numeros entra em um laço for of, onde os elementos serão avaliados par ou não, caso sejam par serão inseridos
+// no array1, caso ímpar serão adicionados no array2.
+// Por fim, é impresso no console a quantidade total de números do array numeros, assim como do array1 (numeros pares) e
+// array2 (numeros impares).
+// De forma que no console será impresso:
+// 14
+// 6
+// 8
