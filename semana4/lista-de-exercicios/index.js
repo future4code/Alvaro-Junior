@@ -130,3 +130,21 @@ while(i < quantidadeDeNumerosPares) {
   console.log(i*2)
   i++
 }
+
+// EXERCÍCIO 4
+
+const tipoTriangulo = (a,b,c) => {
+    if ((a === b) && (b === c)){
+        return "Equilátero"
+    } else if ((a !== b) && (b !== c) && (a !== c)){
+        return "Escaleno"
+    } else {
+        return "Isóceles"
+    }
+}
+
+console.log (tipoTriangulo(4,4,4))
+console.log (tipoTriangulo(4,4,3))
+console.log (tipoTriangulo(4,3,4))
+console.log (tipoTriangulo(3,4,4))
+console.log (tipoTriangulo(3,4,5))
