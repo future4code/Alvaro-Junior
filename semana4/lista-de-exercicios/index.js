@@ -143,8 +143,35 @@ const tipoTriangulo = (a,b,c) => {
     }
 }
 
-console.log (tipoTriangulo(4,4,4))
-console.log (tipoTriangulo(4,4,3))
-console.log (tipoTriangulo(4,3,4))
-console.log (tipoTriangulo(3,4,4))
-console.log (tipoTriangulo(3,4,5))
+// EXERCÍCIO 5
+
+const comparadorDeNumeros = (a, b) => {
+    console.log("O maior é: "+maiorNumero(a, b))
+    console.log(a+" "+divisivel(a, b)+" "+b)
+    console.log(b+" "+divisivel(b, a)+" "+a)
+    console.log("A diferença entre eles é "+diferenca(a, b))
+}
+
+const maiorNumero = (a, b) => {
+    if (a > b){
+        return a
+    } else {
+        return b
+    }
+}
+
+const divisivel = (a, b) => {
+    if (a % b === 0){
+        return "é divisível por"
+    } else {
+        return "não é divisível por"
+    }
+}
+
+const diferenca = (a, b) => {
+    if (a > b){
+        return a - b
+    } else {
+        return b - a
+    }
+}
