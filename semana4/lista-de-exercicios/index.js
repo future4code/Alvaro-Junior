@@ -217,3 +217,11 @@ const segundoMaiorEMenor = (arrayDeNumeros) => {
 }
 
 segundoMaiorEMenor(numeros) // O array numeros foi declarado no Exercício 1 de Lógica de Programação
+
+//EXERCÍCIO 2
+
+const funcaoNaoNomeada = function() {
+    window.alert("Hello Future4")
+}
+
+const resultado = funcaoNaoNomeada()
