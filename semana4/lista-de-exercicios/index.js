@@ -98,3 +98,21 @@ for (numero of numeros){
 
 console.log(arrayPares)
 console.log(arrayImpares)
+
+// EXERCÍCIO 2
+
+// a. O valor da expressão retornará false, pois o operador lógico && retorna verdadeiro apenas se todas as condições forem 
+// true. Como o booleano 2 e o booleano 4 retornam false a expressão retornará false.
+
+// b. O valor da expressão retornará false, pois o operador || retorna true se ao menos uma condição for true. Podemos perceber
+// que a primeira expressão (booleano1 && booleano2) retornar false, como !booleano retorna false a expressão geral retorna false.
+
+// c. O valor da expressão retornará true, pois a primeira expressão (booleano 2 || booleano 3) retorna true e a segunda expressão
+// (booleano4 || booleano 1) também retorna true, por isso a expressão geral também retornará true.
+
+// d. O valor da expressão retornará true, pois a primeira expressão !(booleano2 && booleano3) retorna true uma vez que a 
+// exclamação faz com que o valor retornado seja o oposto da expressão dentro dos parentesis, e a segunda expressão retorna 
+// false, contudo como o operador || retornará true se ao menos uma das condições forem true.
+
+// e. O valor da expressão retornará true, pois a segunda expressão (!booleano 4 && booleano 3 && booleano 3) retornará verdadeiro,
+// e como o operador || retornará true se ao menos uma das condições forem true, a expressão geral retornará true.
