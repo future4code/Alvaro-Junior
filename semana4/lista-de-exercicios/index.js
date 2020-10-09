@@ -49,55 +49,55 @@
 // Para percorrer/iterar uma lista podemos usar laços de repetição, while, for ou for of.
 // Para exemplificar faremos um programa que a partir de um array retorne os elementos pares e impares de um array.
 
-// const numeros = [25, 12, 55, 64, 121, 44, 11, 84, 51, 48, 14, 73, 111, 283]
+const numeros = [25, 12, 55, 64, 121, 44, 11, 84, 51, 48, 14, 73, 111, 283]
 
-// // while
-// let arrayPares = []
-// let arrayImpares = []
+// while
+let arrayPares = []
+let arrayImpares = []
 
-// let i = 0
+let i = 0
 
-// while (i < numeros.length){
-//     if(numeros[i] % 2 === 0){
-//         arrayPares.push(numeros[i])
-//     } else {
-//         arrayImpares.push(numeros[i])
-//     }
-//     i++
-// }
+while (i < numeros.length){
+    if(numeros[i] % 2 === 0){
+        arrayPares.push(numeros[i])
+    } else {
+        arrayImpares.push(numeros[i])
+    }
+    i++
+}
 
-// console.log(arrayPares)
-// console.log(arrayImpares)
+console.log(arrayPares)
+console.log(arrayImpares)
 
-// // for
-// arrayPares = []
-// arrayImpares = []
+// for
+arrayPares = []
+arrayImpares = []
 
-// for(i = 0; i < numeros.length; i++){
-//     if(numeros[i] % 2 === 0){
-//         arrayPares.push(numeros[i])
-//     } else {
-//         arrayImpares.push(numeros[i])
-//     }
-// }
+for(i = 0; i < numeros.length; i++){
+    if(numeros[i] % 2 === 0){
+        arrayPares.push(numeros[i])
+    } else {
+        arrayImpares.push(numeros[i])
+    }
+}
 
-// console.log(arrayPares)
-// console.log(arrayImpares)
+console.log(arrayPares)
+console.log(arrayImpares)
 
-// // for of
-// arrayPares = []
-// arrayImpares = []
+// for of
+arrayPares = []
+arrayImpares = []
 
-// for (numero of numeros){
-//     if(numero % 2 === 0){
-//         arrayPares.push(numero)
-//     } else {
-//         arrayImpares.push(numero)
-//     }
-// }
+for (numero of numeros){
+    if(numero % 2 === 0){
+        arrayPares.push(numero)
+    } else {
+        arrayImpares.push(numero)
+    }
+}
 
-// console.log(arrayPares)
-// console.log(arrayImpares)
+console.log(arrayPares)
+console.log(arrayImpares)
 
 // EXERCÍCIO 2
 
@@ -125,7 +125,7 @@
 // constantequantidadeDeNumerosPares e atualizar o indice i ao final de cada iteração.
 
 const quantidadeDeNumerosPares = Number(prompt("Digite a quantidade de números pares desejada!"))
-let i = 0
+i = 0
 while(i < quantidadeDeNumerosPares) {
   console.log(i*2)
   i++
@@ -142,6 +142,17 @@ const tipoTriangulo = (a,b,c) => {
         return "Isóceles"
     }
 }
+
+console.log("Lados do triangulo: 4,4,4")
+console.log(tipoTriangulo(4,4,4))
+console.log("Lados do triangulo: 4,4,3")
+console.log(tipoTriangulo(4,4,3))
+console.log("Lados do triangulo: 4,3,4")
+console.log(tipoTriangulo(4,3,4))
+console.log("Lados do triangulo: 3,4,4")
+console.log(tipoTriangulo(3,4,4))
+console.log("Lados do triangulo: 3,4,5")
+console.log(tipoTriangulo(3,4,5))
 
 // EXERCÍCIO 5
 
@@ -175,3 +186,34 @@ const diferenca = (a, b) => {
         return b - a
     }
 }
+
+comparadorDeNumeros(15,30)
+
+// Exercícios de Funções
+
+// ECERCÍCIO 1
+
+let maior = -Infinity
+let segundoMaior 
+let menor = Infinity
+let segundoMenor 
+
+const segundoMaiorEMenor = (arrayDeNumeros) => {
+    for (i = 0; i < arrayDeNumeros.length; i++){
+        if (maior < arrayDeNumeros[i]){
+            segundoMaior = maior
+            maior = arrayDeNumeros[i]
+        }
+    }
+    for (i = 0; i < arrayDeNumeros.length; i++){
+        if (menor > arrayDeNumeros[i]){
+            segundoMenor = menor
+            menor = arrayDeNumeros[i]
+        }
+    }
+    console.log("O segundo maior é: "+segundoMaior)
+    console.log("O segundo menor é: "+segundoMenor)
+    console.log(arrayDeNumeros)
+}
+
+segundoMaiorEMenor(numeros) // O array numeros foi declarado no Exercício 1 de Lógica de Programação
