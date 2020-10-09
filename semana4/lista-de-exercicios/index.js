@@ -41,3 +41,60 @@
 // De forma que no console será impresso:
 // -10
 // 283
+
+// Exercícios de Lógica de Programação
+
+// EXERCÍCIO 1
+
+// Para percorrer/iterar uma lista podemos usar laços de repetição, while, for ou for of.
+// Para exemplificar faremos um programa que a partir de um array retorne os elementos pares e impares de um array.
+
+const numeros = [25, 12, 55, 64, 121, 44, 11, 84, 51, 48, 14, 73, 111, 283]
+
+// while
+let arrayPares = []
+let arrayImpares = []
+
+let i = 0
+
+while (i < numeros.length){
+    if(numeros[i] % 2 === 0){
+        arrayPares.push(numeros[i])
+    } else {
+        arrayImpares.push(numeros[i])
+    }
+    i++
+}
+
+console.log(arrayPares)
+console.log(arrayImpares)
+
+// for
+arrayPares = []
+arrayImpares = []
+
+for(i = 0; i < numeros.length; i++){
+    if(numeros[i] % 2 === 0){
+        arrayPares.push(numeros[i])
+    } else {
+        arrayImpares.push(numeros[i])
+    }
+}
+
+console.log(arrayPares)
+console.log(arrayImpares)
+
+// for of
+arrayPares = []
+arrayImpares = []
+
+for (numero of numeros){
+    if(numero % 2 === 0){
+        arrayPares.push(numero)
+    } else {
+        arrayImpares.push(numero)
+    }
+}
+
+console.log(arrayPares)
+console.log(arrayImpares)
