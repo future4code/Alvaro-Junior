@@ -31,3 +31,13 @@
 // 14
 // 6
 // 8
+
+//EXERCÍCIO 4
+
+// O código inicia declarando o array numeros que é um array de numeros, e duas variáveis, numero1 que recebe infinito e 
+// numero2 que recebe 0. Após isso o array numeros entra em um laço for of, onde será atribuido a variável numero1 o menor 
+// elemento do array numeros, e a variável numero2 será atribuido o maior elemento do array numeros. Ao final do código as
+// variáveis numero1 e numero2, contendo o menor e maior elemento do array numeros respectivamente, serão impressas no console.
+// De forma que no console será impresso:
+// -10
+// 283
