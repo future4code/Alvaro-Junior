@@ -115,7 +115,11 @@ console.log(arrayImpares)
 // false, contudo como o operador || retornará true se ao menos uma das condições forem true.
 
 // e. O valor da expressão retornará true, pois a segunda expressão (!booleano 4 && booleano 3 && booleano 3) retornará verdadeiro,
+<<<<<<< HEAD
 // e como o operador || retornará true se ao menos uma das condições forem true, a expressão geral retornará true. 
+=======
+// e como o operador || retornará true se ao menos uma das condições forem true, a expressão geral retornará true.
+>>>>>>> 6d5ff5d8ff5d25e3a0e690c022449cc800d13e4c
 
 // EXERCÍCIO 3
 
@@ -129,7 +133,11 @@ i = 0
 while(i < quantidadeDeNumerosPares) {
   console.log(i*2)
   i++
+<<<<<<< HEAD
 } 
+=======
+}
+>>>>>>> 6d5ff5d8ff5d25e3a0e690c022449cc800d13e4c
 
 // EXERCÍCIO 4
 
@@ -143,11 +151,24 @@ const tipoTriangulo = (a,b,c) => {
     }
 }
 
+<<<<<<< HEAD
 console.log (tipoTriangulo(4,4,4))
 console.log (tipoTriangulo(4,4,3))
 console.log (tipoTriangulo(4,3,4))
 console.log (tipoTriangulo(3,4,4))
 console.log (tipoTriangulo(3,4,5))
+=======
+console.log("Lados do triangulo: 4,4,4")
+console.log(tipoTriangulo(4,4,4))
+console.log("Lados do triangulo: 4,4,3")
+console.log(tipoTriangulo(4,4,3))
+console.log("Lados do triangulo: 4,3,4")
+console.log(tipoTriangulo(4,3,4))
+console.log("Lados do triangulo: 3,4,4")
+console.log(tipoTriangulo(3,4,4))
+console.log("Lados do triangulo: 3,4,5")
+console.log(tipoTriangulo(3,4,5))
+>>>>>>> 6d5ff5d8ff5d25e3a0e690c022449cc800d13e4c
 
 // EXERCÍCIO 5
 
@@ -180,7 +201,11 @@ const diferenca = (a, b) => {
     } else {
         return b - a
     }
+<<<<<<< HEAD
 } 
+=======
+}
+>>>>>>> 6d5ff5d8ff5d25e3a0e690c022449cc800d13e4c
 
 comparadorDeNumeros(15,30)
 
@@ -211,7 +236,11 @@ const segundoMaiorEMenor = (arrayDeNumeros) => {
     console.log(arrayDeNumeros)
 }
 
+<<<<<<< HEAD
 segundoMaiorEMenor(numeros) // O array numeros foi declarado no Exercício 1 de Lógica de Programação 
+=======
+segundoMaiorEMenor(numeros) // O array numeros foi declarado no Exercício 1 de Lógica de Programação
+>>>>>>> 6d5ff5d8ff5d25e3a0e690c022449cc800d13e4c
 
 //EXERCÍCIO 2
 
@@ -219,6 +248,7 @@ const funcaoNaoNomeada = function() {
     window.alert("Hello Future4")
 }
 
+<<<<<<< HEAD
 const resultado = funcaoNaoNomeada() 
 
 // Exercícios de Objetos
@@ -245,3 +275,6 @@ function criaRetangulo(lado1, lado2){
 }
 
 console.log(criaRetangulo(8,9))
+=======
+const resultado = funcaoNaoNomeada()
+>>>>>>> 6d5ff5d8ff5d25e3a0e690c022449cc800d13e4c
