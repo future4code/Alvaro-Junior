@@ -274,7 +274,32 @@ const pessoa = {
 
 function anonimizarPessoa (objeto){
     objeto.nome = "ANONIMO"
-    console.log(objeto)
+    return objeto
 }
 
-anonimizarPessoa(pessoa)
+// Exercícios de Funções de array
+
+// EXERCÍCIO 1
+
+const array1 = [
+	{ nome: "Pedro", idade: 20 },
+	{ nome: "João", idade: 10 },
+	{ nome: "Paula", idade: 12 },
+	{ nome: "Artur", idade: 89 } 
+]
+
+// a.
+const maisDe20 = array1.filter((pessoa, index, array) => {
+    if (pessoa.idade >= 20){
+        return true
+    }
+})
+
+// b.
+const menosDe20 = array1.filter((pessoa, index, array) => {
+    if (pessoa.idade < 20){
+        return true
+    }
+})
+
+// EXERCÍCIO 2
