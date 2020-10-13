@@ -303,3 +303,26 @@ const menosDe20 = array1.filter((pessoa, index, array) => {
 })
 
 // EXERCÍCIO 2
+const array2 = [1, 2, 3, 4, 5, 6]
+
+// a.
+const multiplicaPor2 = []
+array2.forEach((numero) => {
+    multiplicaPor2.push(numero*2)
+})
+
+// b.
+const multiplicaPor3 = []
+array2.forEach((numero) => {
+    multiplicaPor3.push(numero*3)
+})
+
+// c.
+const parOuImpar = []
+array2.forEach((numero, index) => {
+    if (numero % 2 === 0){
+        parOuImpar.push(numero + " é par,") 
+    } else {
+        parOuImpar.push(numero + " é impar,") 
+    }
+})
