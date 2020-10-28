@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios'
 import styled from 'styled-components'
 import RemoveIcon from '../imgs/remove-icon.svg'
 
@@ -18,13 +19,52 @@ const ListContainer = styled.div`
     justify-content: center;
 `
 
+const baseUrl = "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users"
+
+const axiosConfig = {
+    headers: {
+        Authorization: "Álvaro-Joaquim-de-Faria-Barros-Júnior-Dumont"
+      }
+}
+
 export default class RegistrationList extends React.Component {
+
+    state = {
+        users: [],
+    }
+
+    componentDidMount = () => {
+        this.getAllUsers()
+      }
+    
+      getAllUsers = () => {
+        axios.get(baseUrl, axiosConfig).then ((res)=>{
+          this.setState({users: res.data})
+        }).catch((err =>{
+          console.log(err.message)
+        }))
+      }
+
+      deleteUser = (id) => {
+
+        let deleteConfirmation = window.confirm("Tem certeza de que deseja remover este usuário?")
+    
+        if (deleteConfirmation) {
+          axios.delete(`${baseUrl}/${id}`, axiosConfig).then (()=>{
+            this.getAllUsers()
+            alert("Usuário removido!")
+          }).catch((err =>{
+            console.log(err.message)
+          }))
+        }
+      }
+
     render() {
-        const renderedUsersList = this.props.users.map((user)=>{
+        const renderedUsersList = this.state.users.map((user)=>{
             return (
-                <UserContainer>
-                    <p key={user.id}>{user.name}</p>
-                    <RemoveButton onClick={() => this.props.deleteUser(user.id)}><img src={RemoveIcon}/></RemoveButton>
+                <UserContainer key={user.id}>
+                    <p onClick={() => this.props.goToUserDetails(user.id)}>{user.name}</p>
+                    <RemoveButton onClick={() => this.deleteUser(user.id)}><img src={RemoveIcon}/></RemoveButton>
                 </UserContainer>   
                 )
         })
