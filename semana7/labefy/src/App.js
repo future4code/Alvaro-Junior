@@ -162,7 +162,6 @@ export default class App extends React.Component {
   }
 
   render () {
-    console.log(this.state)
     const Playlists = this.state.playlists.map((playlist) => {
       return <PlaylistHolder key={playlist.id}>
           <p onClick={() => this.getPlaylistTracks(playlist.id, playlist.name)}>
@@ -183,9 +182,6 @@ export default class App extends React.Component {
     return (
       <div className="App">
         <MainContainer>
-          {/* <input  onChange={this.onChangeNewPlayList}
-                  value={this.state.newPlaylistName}/>
-          <button onClick={this.creatPlaylist}>Criar Nova Playlist</button> */}
           <PlaylistsContainer>
             {Playlists}
             <PlaylistHolder onClick={this.creatPlaylist}>Add</PlaylistHolder>
