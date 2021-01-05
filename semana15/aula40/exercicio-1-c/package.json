@@ -1,0 +1,17 @@
+{
+  "name": "exercicios",
+  "version": "1.0.0",
+  "description": "\"Exercícios da primeira aula de Backend da Doumont\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "clear && node ageInSevenYears.js",
+    "test": "echo 'Error: no test specified'"
+  },
+  "keywords": [
+    "backend",
+    "node",
+    "package.json"
+  ],
+  "author": "Álvaro Barros",
+  "license": "ISC"
+}

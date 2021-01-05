@@ -1,0 +1,20 @@
+{
+  "name": "exercicios",
+  "version": "1.0.0",
+  "description": "\"Exercícios da primeira aula de Backend da Doumont\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'Error: no test specified'",
+    "start": "clear && node addNewTasks.js"
+  },
+  "keywords": [
+    "backend",
+    "node",
+    "package.json"
+  ],
+  "author": "Álvaro Barros",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security"
+  }
+}
