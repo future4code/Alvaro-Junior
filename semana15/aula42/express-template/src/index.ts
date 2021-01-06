@@ -74,35 +74,7 @@ app.get('/countries/:id', (req: Request, res: Response) => {
   
   //------------------------------------------------------------//
   
-  //------------------------------------------------------------//
-  // Endpoint 4 - endpoint para editar nome ou capital de um país
-  
-  app.put('countries/edit', (req: Request, res: Response) => {
-  
-    res.send("Put está funcionando")
-    // let country: country | undefined = countries.find(
-    //   country => country.id === Number(req.params.id)
-    // )
-  
-    // if (country) {
-    //   if(req.body.name) {
-    //     country.name = req.body.name
-    //   }
-    //   if(req.body.caoital) {
-    //     country.capital = req.body.capital
-    //   }
-    //   if(!req.body.name || !req.body.caoital) {
-    //     res.status(400).send("Novos nome e capital não informados")
-    //   } else {
-    //     res.status(200).send("País editado com sucesso")
-    //   }
-    // } else {
-    //   res.status(404).send("País não encontrado!")
-    // }
-  
-  })
-  
-  //------------------------------------------------------------//
+
   
   app.listen(3003, () => {
   console.log("Server is running in http://localhost:3003");
