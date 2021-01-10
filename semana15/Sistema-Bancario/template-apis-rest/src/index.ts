@@ -133,8 +133,8 @@ app.post("/clients/payment", (req: Request, res: Response) => {
 
   try{
     if (!req.body.description || !req.body.cpf || !req.body.value) {
-      errorCode = 404
-      throw new Error("Parâmetros inválidos!")
+      errorCode = 422
+      throw new Error("Por favor preencha todos os parâmetros obrigatórios!")
     }
 
     let paymentDate: Date = new Date
@@ -144,10 +144,20 @@ app.post("/clients/payment", (req: Request, res: Response) => {
       paymentDate = new Date (arrPaymentDate[1]+'-'+arrPaymentDate[0]+"-"+arrPaymentDate[2])
     }
 
+    if (paymentDate < new Date) {
+      errorCode = 422
+      throw new Error("Data inválida!")
+    }
+    
     const clientIndex: number = clients.findIndex((client: client) => {return client.cpf === req.body.cpf})
+    
+    if (Number(req.body.value) > clients[clientIndex].balance) {
+      errorCode = 422
+      throw new Error("Saldo insuficiente para a transação!")
+    }
 
     const statement: statement = {
-      value: req.body.value,
+      value: -req.body.value,
       date: paymentDate,
       description: req.body.description
     }
@@ -160,6 +170,66 @@ app.post("/clients/payment", (req: Request, res: Response) => {
   }
 })
 
+// Endpoint para transferências
+
+app.post("/clients/transfer", (req: Request, res: Response) => {
+  let errorCode: number = 400
+
+  try{
+    if (!req.body.cpfSender || !req.body.cpfReceiver || !req.body.nameSender || !req.body.nameReceiver || !req.body.value) {
+      errorCode = 422
+      throw new Error("Por favor preencha todos os parâmetros obrigatórios!")
+    }
+
+    const senderIndex: number = clients.findIndex((client: client) => {return client.cpf === req.body.cpfSender})
+    const receiverIndex: number = clients.findIndex((client: client) => {return client.cpf === req.body.cpfReceiver})
+
+    if(senderIndex === -1) {
+      errorCode = (422)
+      throw new Error("Remetente não encontrado")
+    }
+
+    if(req.body.nameSender !== clients[senderIndex].name){
+      errorCode = (422)
+      throw new Error("Nome e CPF do remetente não correspondem!")
+    }
+
+    if(receiverIndex === -1) {
+      errorCode = (422)
+      throw new Error("Destinatário não encontrado")
+    }
+
+    if(req.body.nameReceiver !== clients[receiverIndex].name){
+      errorCode = (422)
+      throw new Error("Nome e CPF do destinatário não correspondem!")
+    }
+
+    if (Number(req.body.value) > clients[senderIndex].balance) {
+      errorCode = 422
+      throw new Error("Saldo insuficiente para a transação!")
+    }
+
+    const senderStatement: statement = {
+      value: -req.body.value,
+      date: new Date,
+      description: "Transferência enviada!"
+    }
+
+    const receiverStatement: statement = {
+      value: Number(req.body.value),
+      date: new Date,
+      description: "Transferência recebida!"
+    }
+
+    clients[senderIndex].statement.push(senderStatement)
+    clients[receiverIndex].statement.push(receiverStatement)
+
+    res.status(200).send("Trasnferência agendado!")
+  }catch(error){
+    res.status(errorCode).send(error.message)
+  }
+})
+
 // Endpoint para depósitos
 
 app.put("/clients/deposit", (req: Request, res: Response) => {
@@ -167,7 +237,6 @@ app.put("/clients/deposit", (req: Request, res: Response) => {
 
   try{
     if (!req.body.name || !req.body.cpf || !req.body.value) {
-      errorCode = 400
       throw new Error("Parâmetros inválidos")
     }
 
@@ -179,7 +248,7 @@ app.put("/clients/deposit", (req: Request, res: Response) => {
     }
 
     const statement: statement = {
-      value: Number(-req.body.value),
+      value: Number(req.body.value),
       date: new Date,
       description: "Depósito em dinheiro"
     }
@@ -187,7 +256,7 @@ app.put("/clients/deposit", (req: Request, res: Response) => {
     clients[clientIndex].balance += Number(req.body.value)
     clients[clientIndex].statement.push(statement)
 
-    res.status(200).send("Saldo atualizado com sucesso!")
+    res.status(200).send("Depósito realizado!")
   }catch(error){
     res.status(errorCode).send(error.message)
   }
@@ -210,11 +279,11 @@ app.put("/clients/update/:cpf", (req: Request, res: Response) => {
 
     for (let i of clients[clientIndex].statement) {
       if (i.date < today) {
-        clients[clientIndex].balance += Number(i.value)
+        if (i.description !== "Depósito em dinheiro"){
+          clients[clientIndex].balance += Number(i.value)
+        }
       }
     }
-
-    
 
     res.status(200).send("Saldo atualizado!")
   }catch(error){
