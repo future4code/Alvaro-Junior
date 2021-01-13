@@ -179,6 +179,32 @@ app.get('/actor/:id', async (req: Request, res: Response) => {
 /**************************************************************/
 
 /**********************Movies Table****************************/
+const getAllMovies = async () => {
+  try {
+    const result = await connection
+      .select("*")
+      .from("Movies")
+      .limit(15)
+    
+    return result
+  } catch (error) {
+    throw new Error(error)
+  }
+}
+
+const searchMovies = async (text: string) => {
+  try {
+    const result = await connection
+      .select("*")
+      .from("Movies")
+      .where("name", "like", `%${text}%`).orWhere("sinopse", "like", `%${text}%`)
+
+    return result
+  } catch (error) {
+    throw new Error(error)
+  }
+}
+
 const createMovie = async (
   id: string,
   name: string,
@@ -203,10 +229,31 @@ const createMovie = async (
   }
 }
 /**************************************************************/
+app.get('/movie/all', async (req: Request, res: Response) => {
+  try {
+    const result = await getAllMovies()
+
+    res.status(200).send(result)
+  } catch (error) {
+    res.status(400).send(error.message)
+  }
+})
+
+app.get('/movie/search', async (req: Request, res: Response) => {
+  try {
+    const text: string = req.query.query as string
+    const result = await searchMovies(text)
+
+    res.status(200).send(result)
+  } catch (error) {
+    res.status(400).send(error.message)
+  }
+})
+
 app.post('/movie', async (req: Request, res: Response) => {
   try {
     const {id, name, sinopse, release_date, rating, playing_limit_date} = req.body
-    const result = createMovie(id, name, sinopse, release_date, Number(rating), playing_limit_date)
+    const result = await createMovie(id, name, sinopse, release_date, Number(rating), playing_limit_date)
 
     res.status(200).send("Filme Cadastrado")
   } catch (error) {
