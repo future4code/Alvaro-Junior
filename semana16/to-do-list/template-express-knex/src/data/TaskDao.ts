@@ -8,7 +8,7 @@ export const insertTask = async (task: task) => {
 
     return "Tarefa cadastrado!"
   } catch (error) {
-    throw new Error(error)
+    throw new Error(error.sqlMessage)
   }
 }
 
@@ -23,14 +23,14 @@ export const getTaskById = async (id: string): Promise<any> => {
 
     return result[0]
   } catch (error) {
-    throw new Error(error)
+    throw new Error(error.sqlMessage)
   }
 }
 
 export const getTaskByCreatorUserId = async (id: string): Promise<any> => {
   try {
     const result = await connection("User")
-      .join('Task', function() {
+      .leftJoin('Task', function() {
         this.on('User.id', '=', 'Task.creatorUserId')
       })
       .select("Task.id as taskId", "title", "description", "limitDate", "creatorUserId", "User.nickname as creatorUserNickname")
@@ -38,6 +38,6 @@ export const getTaskByCreatorUserId = async (id: string): Promise<any> => {
     
     return result
   } catch (error) {
-    throw new Error(error)
+    throw new Error(error.sqlMessage)
   }
 }

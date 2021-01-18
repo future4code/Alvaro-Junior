@@ -8,7 +8,7 @@ export const insertUser = async (user: user): Promise<any> => {
 
     return "Usuário cadastrado!"
   } catch (error) {
-    throw new Error(error)
+    throw new Error(error.sqlMessage)
   }
 }
 
@@ -19,7 +19,7 @@ export const getAllUsers = async (): Promise<any> => {
 
     return result
   } catch (error) {
-    throw new Error(error)
+    throw new Error(error.sqlMessage)
   }
 }
 
@@ -31,7 +31,19 @@ export const getUserById = async (id: string): Promise<any> => {
 
     return result[0]
   } catch (error) {
-    throw new Error(error)
+    throw new Error(error.sqlMessage)
+  }
+}
+
+export const getUserByText = async (text: string): Promise<any> => {
+  try {
+    const result = await connection("User")
+      .select("id", "nickname")
+      .where("nickname", "like", `%${text}%`).orWhere("email", "like", `%${text}%`)
+    
+    return result
+  } catch (error) {
+    throw new Error(error.sqlMessage)
   }
 }
 
@@ -43,6 +55,6 @@ export const updateUser = async (id: string, body: {}) => {
     
     return "Usuário atualizado com sucesso!"
   } catch (error) {
-    throw new Error(error)
+    throw new Error(error.sqlMessage)
   }
 }
