@@ -1,6 +1,6 @@
 export type search = {
-  name? : string,
-  type?: string,
-  orderBy? : string,
-  page? : number
+  name : string,
+  type: string,
+  orderBy : string,
+  page : string
 }

@@ -3,7 +3,7 @@ import knex from "knex";
 import cors from "cors";
 import dotenv from "dotenv";
 import { AddressInfo } from "net";
-import { getAllUsers, getOrderedUsers, getPaginatedUsers, getUserByName, getUserByType } from "./endpoints/UsersService";
+import { getAllUsers, getOrderedUsers, getPaginatedUsers, getUserByName, getUserByType, getUsers } from "./endpoints/UsersService";
 
 dotenv.config();
 
@@ -24,6 +24,7 @@ app.use(cors())
 
 // endpoints aqui
 
+app.get('/users', getUsers)
 app.get('/users/all', getAllUsers)
 app.get('/users/paginated', getPaginatedUsers)
 app.get('/users/ordered', getOrderedUsers)

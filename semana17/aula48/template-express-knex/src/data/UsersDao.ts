@@ -1,4 +1,5 @@
 import {connection} from '../index'
+import { search } from '../types/search'
 
 export async function selectAllUsers():Promise<any> {
   const result = await connection('aula48_exercicio')
@@ -41,9 +42,16 @@ export async function selectPaginatedUsers(page: number):Promise<any> {
   return result
 }
 
-export async function selectUsers():Promise<any> {
+export async function selectUsers(search: search):Promise<any> {
+  const pageNumber = Number(search.page)
+  const offset: number = 5 * (pageNumber - 1)
   const result = await connection('aula48_exercicio')
     .select('id', 'name', 'email', 'type')
+    .where('name', 'like', `%${search.name}%`)
+    .andWhere('type', search.type)
+    .orderBy(`${search.orderBy}`)
+    .limit(5)
+    .offset(offset)
 
   return result
 }
